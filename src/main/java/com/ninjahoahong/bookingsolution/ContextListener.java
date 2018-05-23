@@ -1,6 +1,7 @@
 package com.ninjahoahong.bookingsolution;
 
 import com.googlecode.objectify.ObjectifyService;
+import com.ninjahoahong.bookingsolution.entities.Product;
 import com.ninjahoahong.bookingsolution.entities.User;
 
 import javax.servlet.ServletContextEvent;
@@ -10,5 +11,6 @@ public class ContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent event) {
         ObjectifyService.init();
         ObjectifyService.register(User.class);
+        ObjectifyService.register(Product.class);
     }
 }
