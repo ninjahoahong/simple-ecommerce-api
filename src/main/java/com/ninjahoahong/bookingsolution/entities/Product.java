@@ -3,7 +3,6 @@ package com.ninjahoahong.bookingsolution.entities;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
-import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
@@ -12,20 +11,28 @@ public class Product {
     @Id
     private String code;
     private String name;
-    private BigDecimal price;
+    private Float price;
     private Integer quantity;
     private Set<String> categories;
     private String brand;
     private String description;
+    private String imgUrl;
 
-    public Product() {}
+    public Product() {
+    }
 
-    public Product(String code, String name, BigDecimal price, Integer quantity, Set<String> categories) {
+    public Product(
+            String code, String name, Float price, Integer quantity, Set<String> categories,
+            String brand, String description, String imgUrl) {
+
         this.code = code;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.categories = categories;
+        this.brand = brand;
+        this.description = description;
+        this.imgUrl = imgUrl;
     }
 
     public String getCode() {
@@ -44,11 +51,20 @@ public class Product {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public void setPrice(Float price) {
+
         this.price = price;
     }
 
@@ -83,4 +99,6 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
+
+
 }

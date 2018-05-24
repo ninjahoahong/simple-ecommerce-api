@@ -22,19 +22,19 @@ apply plugin: 'war'
 apply plugin: 'com.google.cloud.tools.appengine'
 
 dependencies {
-    compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.63'
+    implementation 'com.google.appengine:appengine-api-1.0-sdk:1.9.63'
 
-    compile 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
 
     // JERSEY
-    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.27'
-    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.27'
-    compile 'org.glassfish.jersey.inject:jersey-hk2:2.27'
+    implementation 'org.glassfish.jersey.containers:jersey-container-servlet:2.27'
+    implementation 'org.glassfish.jersey.media:jersey-media-json-jackson:2.27'
+    implementation 'org.glassfish.jersey.inject:jersey-hk2:2.27'
 
     // Datastore
-    compile 'com.googlecode.objectify:objectify:6.0'
+    implementation 'com.googlecode.objectify:objectify:6.0'
 
-    compile 'com.google.api-client:google-api-client:1.23.0'
+    implementation 'com.google.api-client:google-api-client:1.23.0'
 }
 
 appengine {
