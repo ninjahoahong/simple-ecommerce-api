@@ -1,4 +1,4 @@
-package com.ninjahoahong.bookingsolution.apiv1.resource;
+package com.ninjahoahong.bookingsolution.apiv1.controllers;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -6,7 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
 @Path("appointments")
-public class AppointmentResource {
+public class AppointmentController {
 
     @GET
     @Path("{id}")
